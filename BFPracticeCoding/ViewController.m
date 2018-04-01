@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BFSingletonObject.h"
 
 @interface ViewController ()
 
@@ -17,12 +18,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [self singletonInfo1];
+    [self singletonInfo2];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Singleto
+
+- (void)singletonInfo1 {
+    
+    BFSingletonObject *obj = [BFSingletonObject sharedInstance];
+    obj.name = @"Alex";
+    [obj updateAge:18];
+    
+    NSLog(@"info1:%@", obj);
+}
+
+- (void)singletonInfo2 {
+    NSLog(@"info2:%@", [BFSingletonObject sharedInstance]);
 }
 
 
