@@ -14,9 +14,13 @@
 		4AC4D6CF2070CBF30093E05C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC4D6CE2070CBF30093E05C /* Assets.xcassets */; };
 		4AC4D6D22070CBF30093E05C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC4D6D02070CBF30093E05C /* LaunchScreen.storyboard */; };
 		4AC4D6DC2070D4AC0093E05C /* BFSingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC4D6DB2070D4AC0093E05C /* BFSingletonObject.m */; };
+		4AC4D6E02070DA9D0093E05C /* BFDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC4D6DF2070DA9D0093E05C /* BFDatabaseManager.m */; };
+		DA8BD252710A80A10877FEEE /* libPods-BFPracticeCoding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F5C8101A969A15306E38A6 /* libPods-BFPracticeCoding.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01F5C8101A969A15306E38A6 /* libPods-BFPracticeCoding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BFPracticeCoding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4431EB4830DB766CBB541FD2 /* Pods-BFPracticeCoding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFPracticeCoding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BFPracticeCoding/Pods-BFPracticeCoding.debug.xcconfig"; sourceTree = "<group>"; };
 		4AC4D6BF2070CBF00093E05C /* BFPracticeCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BFPracticeCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC4D6C32070CBF00093E05C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4AC4D6C52070CBF00093E05C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +33,9 @@
 		4AC4D6D32070CBF40093E05C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AC4D6DA2070D4AC0093E05C /* BFSingletonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFSingletonObject.h; sourceTree = "<group>"; };
 		4AC4D6DB2070D4AC0093E05C /* BFSingletonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFSingletonObject.m; sourceTree = "<group>"; };
+		4AC4D6DE2070DA9D0093E05C /* BFDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFDatabaseManager.h; sourceTree = "<group>"; };
+		4AC4D6DF2070DA9D0093E05C /* BFDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFDatabaseManager.m; sourceTree = "<group>"; };
+		ED9B9BAF3F8BC82469EB398E /* Pods-BFPracticeCoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFPracticeCoding.release.xcconfig"; path = "Pods/Target Support Files/Pods-BFPracticeCoding/Pods-BFPracticeCoding.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8BD252710A80A10877FEEE /* libPods-BFPracticeCoding.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				4AC4D6C12070CBF00093E05C /* BFPracticeCoding */,
 				4AC4D6C02070CBF00093E05C /* Products */,
+				679586872122561B9A2AEEEC /* Pods */,
+				EC08D423142EC72ABA96F432 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +71,7 @@
 		4AC4D6C12070CBF00093E05C /* BFPracticeCoding */ = {
 			isa = PBXGroup;
 			children = (
+				4AC4D6DD2070DA700093E05C /* FMDB */,
 				4AC4D6D92070D46B0093E05C /* Singleton */,
 				4AC4D6C52070CBF00093E05C /* AppDelegate.h */,
 				4AC4D6C62070CBF00093E05C /* AppDelegate.m */,
@@ -92,6 +103,32 @@
 			path = Singleton;
 			sourceTree = "<group>";
 		};
+		4AC4D6DD2070DA700093E05C /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				4AC4D6DE2070DA9D0093E05C /* BFDatabaseManager.h */,
+				4AC4D6DF2070DA9D0093E05C /* BFDatabaseManager.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		679586872122561B9A2AEEEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4431EB4830DB766CBB541FD2 /* Pods-BFPracticeCoding.debug.xcconfig */,
+				ED9B9BAF3F8BC82469EB398E /* Pods-BFPracticeCoding.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC08D423142EC72ABA96F432 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01F5C8101A969A15306E38A6 /* libPods-BFPracticeCoding.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AC4D6D62070CBF40093E05C /* Build configuration list for PBXNativeTarget "BFPracticeCoding" */;
 			buildPhases = (
+				F4A95E374BCC7D50A6EF52C2 /* [CP] Check Pods Manifest.lock */,
 				4AC4D6BB2070CBEF0093E05C /* Sources */,
 				4AC4D6BC2070CBEF0093E05C /* Frameworks */,
 				4AC4D6BD2070CBEF0093E05C /* Resources */,
+				AA5CD6ABCF9D7F0C9EAFAA71 /* [CP] Embed Pods Frameworks */,
+				6A7160B22FDF7E30DA55ADBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,6 +199,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6A7160B22FDF7E30DA55ADBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BFPracticeCoding/Pods-BFPracticeCoding-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA5CD6ABCF9D7F0C9EAFAA71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BFPracticeCoding/Pods-BFPracticeCoding-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4A95E374BCC7D50A6EF52C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BFPracticeCoding-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4AC4D6BB2070CBEF0093E05C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -167,6 +258,7 @@
 				4AC4D6DC2070D4AC0093E05C /* BFSingletonObject.m in Sources */,
 				4AC4D6CA2070CBF30093E05C /* ViewController.m in Sources */,
 				4AC4D6C72070CBF00093E05C /* AppDelegate.m in Sources */,
+				4AC4D6E02070DA9D0093E05C /* BFDatabaseManager.m in Sources */,
 				4AC4D6C42070CBF00093E05C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +375,7 @@
 		};
 		4AC4D6D72070CBF40093E05C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4431EB4830DB766CBB541FD2 /* Pods-BFPracticeCoding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N8M9ALB4QH;
@@ -296,6 +389,7 @@
 		};
 		4AC4D6D82070CBF40093E05C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED9B9BAF3F8BC82469EB398E /* Pods-BFPracticeCoding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N8M9ALB4QH;
@@ -326,6 +420,7 @@
 				4AC4D6D82070CBF40093E05C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

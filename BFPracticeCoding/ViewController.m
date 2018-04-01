@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "BFSingletonObject.h"
+#import "BFDatabaseManager.h"
 
 @interface ViewController ()
 
@@ -21,8 +22,39 @@
     
     [self singletonInfo1];
     [self singletonInfo2];
+    
+    // Database
+    [self operateDatabase];
 }
 
+#pragma mark - FMDB
+
+- (void)operateDatabase {
+    
+    BFDatabaseManager *databaseManager = [BFDatabaseManager sharedInstance];
+    
+    NSLog(@"创表");
+    [databaseManager initDefaultDatabase];
+    [databaseManager createDefaultPersonTable];
+    [databaseManager selectAllRecords];
+    
+    // 清空旧数据
+//    NSLog(@"清空旧数据");
+//    [databaseManager deleteAllRecords];
+//    [databaseManager selectAllRecords];
+    
+    NSLog(@"增");
+    [databaseManager insertDefaultRecord];
+    [databaseManager selectAllRecords];
+    
+    NSLog(@"删");
+    [databaseManager deleteLastRecord];
+    [databaseManager selectAllRecords];
+    
+    NSLog(@"改");
+    [databaseManager updateDefaultRecord];
+    [databaseManager selectAllRecords];
+}
 
 #pragma mark - Singleto
 
